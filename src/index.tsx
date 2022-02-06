@@ -9,7 +9,11 @@ import App from 'App';
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter
+        basename={
+          process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : ''
+        }
+      >
         <App />
       </BrowserRouter>
     </ThemeProvider>
