@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "https://jfeigel.github.io/the-adventure-challenge/static/js/main.c963304c.js",
-    "static/media/logo.png": "https://jfeigel.github.io/the-adventure-challenge/static/media/logo.9da9ee2cdd095ad22a4b.png",
-    "index.html": "https://jfeigel.github.io/the-adventure-challenge/index.html",
-    "main.c963304c.js.map": "https://jfeigel.github.io/the-adventure-challenge/static/js/main.c963304c.js.map"
+    "main.js": "/the-adventure-challenge/static/js/main.777058ef.js",
+    "static/media/logo.png": "/the-adventure-challenge/static/media/logo.9da9ee2cdd095ad22a4b.png",
+    "index.html": "/the-adventure-challenge/index.html",
+    "main.777058ef.js.map": "/the-adventure-challenge/static/js/main.777058ef.js.map"
   },
   "entrypoints": [
-    "static/js/main.c963304c.js"
+    "static/js/main.777058ef.js"
   ]
 }
