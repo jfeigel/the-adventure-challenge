@@ -6,7 +6,6 @@
   "engines": {
     "node": "^16"
   },
-  "homepage": "https://jfeigel.github.io/the-adventure-challenge",
   "author": {
     "name": "James Feigel",
     "email": "james.feigel@gmail.com",
