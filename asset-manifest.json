@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.9a148a87.js",
-    "static/js/787.09cb6614.chunk.js": "/static/js/787.09cb6614.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.9a148a87.js.map": "/static/js/main.9a148a87.js.map",
-    "787.09cb6614.chunk.js.map": "/static/js/787.09cb6614.chunk.js.map"
+    "main.css": "/the-adventure-challenge/static/css/main.073c9b0a.css",
+    "main.js": "/the-adventure-challenge/static/js/main.b8ce1bd3.js",
+    "static/js/787.09cb6614.chunk.js": "/the-adventure-challenge/static/js/787.09cb6614.chunk.js",
+    "static/media/logo.svg": "/the-adventure-challenge/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/the-adventure-challenge/index.html",
+    "main.073c9b0a.css.map": "/the-adventure-challenge/static/css/main.073c9b0a.css.map",
+    "main.b8ce1bd3.js.map": "/the-adventure-challenge/static/js/main.b8ce1bd3.js.map",
+    "787.09cb6614.chunk.js.map": "/the-adventure-challenge/static/js/787.09cb6614.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.9a148a87.js"
+    "static/js/main.b8ce1bd3.js"
   ]
 }
