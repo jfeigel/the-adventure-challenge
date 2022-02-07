@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/the-adventure-challenge/static/js/main.777058ef.js",
+    "main.js": "/the-adventure-challenge/static/js/main.b2a92c4f.js",
     "static/media/logo.png": "/the-adventure-challenge/static/media/logo.9da9ee2cdd095ad22a4b.png",
     "index.html": "/the-adventure-challenge/index.html",
-    "main.777058ef.js.map": "/the-adventure-challenge/static/js/main.777058ef.js.map"
+    "main.b2a92c4f.js.map": "/the-adventure-challenge/static/js/main.b2a92c4f.js.map"
   },
   "entrypoints": [
-    "static/js/main.777058ef.js"
+    "static/js/main.b2a92c4f.js"
   ]
 }
