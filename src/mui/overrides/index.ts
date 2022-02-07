@@ -1,8 +1,10 @@
-import { ComponentsOverrides } from '@mui/material/styles';
+import { ComponentsOverrides, Theme } from '@mui/material';
 
+import MuiButton from './MuiButton';
 import MuiCssBaseline from './MuiCssBaseline';
 
-const overrides: ComponentsOverrides = {
+const overrides: ComponentsOverrides<Theme> = {
+  MuiButton,
   MuiCssBaseline
 };
 

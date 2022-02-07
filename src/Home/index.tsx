@@ -1,14 +1,27 @@
 import React from 'react';
 
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 
 import logo from 'images/logo.png';
 
 function Home() {
   return (
-    <Box display="flex" justifyContent="center" alignItems="center" flex="1">
-      <img src={logo} alt="Adventure Challenge logo" />
-    </Box>
+    <Container
+      maxWidth="xl"
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: '1'
+      }}
+    >
+      <Box
+        component="img"
+        src={logo}
+        alt="Adventure Challenge logo"
+        sx={{ maxWidth: '80%' }}
+      />
+    </Container>
   );
 }
 
