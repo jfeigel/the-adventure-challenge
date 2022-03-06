@@ -1,4 +1,4 @@
-export default {
+const overrides = {
   html: {
     height: '100%'
   },
@@ -14,3 +14,5 @@ export default {
     }
   }
 };
+
+export default overrides;
