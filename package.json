@@ -1,6 +1,7 @@
 {
   "name": "the-adventure-challenge",
   "version": "0.1.0",
+  "description": "Frontend for The Adventure Challenge Tracker",
   "private": true,
   "license": "UNLICENSED",
   "engines": {
@@ -16,25 +17,6 @@
     "type": "git",
     "url": "https://github.com/jfeigel/the-adventure-challenge.git"
   },
-  "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@mui/icons-material": "^5.3.1",
-    "@mui/material": "^5.4.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^17.0.20",
-    "@types/react-dom": "^17.0.9",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "6",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -44,19 +26,24 @@
     "lint": "tsc --noEmit && ./node_modules/.bin/eslint src/**/*.ts{,x}",
     "prepare": "husky install"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@auth0/auth0-react": "^1.9.0",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/material": "^5.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "6"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "eslint": "^8.2.0",
@@ -71,7 +58,22 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": ">=6",
     "lint-staged": ">=10",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "react-scripts": "5.0.0",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

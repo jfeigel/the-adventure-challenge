@@ -9,11 +9,11 @@ import {
   Toolbar,
   Typography
 } from '@mui/material';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import WcIcon from '@mui/icons-material/Wc';
 
 import logo from 'images/logo48.png';
+import AccountButton from './AccountButton';
 
 function Header() {
   return (
@@ -71,9 +71,7 @@ function Header() {
               </IconButton>
               {/* /Family Button */}
             </Box>
-            <IconButton aria-label="account login">
-              <AccountCircleIcon />
-            </IconButton>
+            <AccountButton />
           </Toolbar>
         </Container>
       </AppBar>
