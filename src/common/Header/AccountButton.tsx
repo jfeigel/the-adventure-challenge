@@ -75,7 +75,7 @@ function AccountButton() {
             handleClose();
           }}
         >
-          Logout
+          Sign Out
         </MenuItem>
       </Menu>
     </>

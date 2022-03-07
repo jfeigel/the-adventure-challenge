@@ -6,11 +6,13 @@ import {
   Button,
   Container,
   IconButton,
+  Link,
   Toolbar,
   Typography
 } from '@mui/material';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import WcIcon from '@mui/icons-material/Wc';
+import { Link as RouterLink } from 'react-router-dom';
 
 import logo from 'images/logo48.png';
 import AccountButton from './AccountButton';
@@ -21,7 +23,11 @@ function Header() {
       <AppBar position="static" color="inherit">
         <Container maxWidth="xl" disableGutters>
           <Toolbar>
-            <Box
+            <Link
+              component={RouterLink}
+              to="/"
+              underline="none"
+              color="inherit"
               sx={{
                 display: 'flex',
                 alignItems: 'center',
@@ -40,7 +46,7 @@ function Header() {
               >
                 The Adventure Challenge Tracker
               </Typography>
-            </Box>
+            </Link>
             <Box
               sx={{
                 display: 'flex',
