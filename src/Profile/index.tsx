@@ -43,7 +43,7 @@ function Profile() {
         sx={{
           mt: 20,
           px: 3,
-          py: 2,
+          py: 4,
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center'
@@ -54,7 +54,7 @@ function Profile() {
         ) : (
           <UserAvatar
             user={user}
-            sx={{ my: 2, width: 100, height: 100, boxShadow: 2 }}
+            sx={{ mb: 3, width: 100, height: 100, boxShadow: 2 }}
           />
         )}
         <Typography variant="h4">
@@ -64,15 +64,15 @@ function Profile() {
             user?.name
           )}
         </Typography>
-        <Typography variant="body2">
+        <Typography variant="body2" sx={{ mt: 0.5 }}>
           {loading ? (
-            <Skeleton variant="rectangular" width={100} sx={{ my: 1 }} />
+            <Skeleton variant="rectangular" width={100} sx={{ my: 0.5 }} />
           ) : (
             user?.email
           )}
         </Typography>
         {!loading && identity ? (
-          <Box sx={{ display: 'flex', alignItems: 'center', mt: 2 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', mt: 3 }}>
             <Typography fontWeight="medium" sx={{ mr: 1 }}>
               Connection
             </Typography>
@@ -86,7 +86,7 @@ function Profile() {
         <Button
           variant="contained"
           onClick={() => logout()}
-          sx={{ mt: 5 }}
+          sx={{ mt: 6 }}
           disabled={loading}
         >
           Sign Out

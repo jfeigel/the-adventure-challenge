@@ -18,7 +18,7 @@ ReactDOM.render(
         <Auth0Provider
           domain="jfeigel.auth0.com"
           clientId="bs9cX5hIrsq1LMc85bKFvmBkgcC143In"
-          redirectUri={window.location.origin}
+          redirectUri={`${window.location.origin}${process.env.REACT_APP_BASE_URI}`}
           audience="https://jfeigel.auth0.com/api/v2/"
           scope="read:current_user"
         >
