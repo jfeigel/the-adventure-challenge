@@ -1,8 +1,10 @@
-import { PaletteOptions } from '@mui/material/styles';
-import createPalette from '@mui/material/styles/createPalette';
+import { PaletteOptions, createTheme } from '@mui/material';
 
-const basePaletteOptions: PaletteOptions = {};
-const { augmentColor } = createPalette(basePaletteOptions);
+import theme from './baseTheme';
+
+const {
+  palette: { augmentColor }
+} = theme;
 
 const paletteOptions: PaletteOptions = {
   couples: augmentColor({
@@ -22,6 +24,6 @@ const paletteOptions: PaletteOptions = {
   })
 };
 
-const palette = createPalette(paletteOptions);
+const { palette } = createTheme({ palette: paletteOptions });
 
 export default palette;

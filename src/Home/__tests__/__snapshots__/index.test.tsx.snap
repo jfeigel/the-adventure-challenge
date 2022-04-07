@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home tests Should render the home page 1`] = `
+<div>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthXl css-znd6jn-MuiContainer-root"
+  >
+    <img
+      alt="Adventure Challenge logo"
+      class="MuiBox-root css-1vunpsv"
+      src="logo.png"
+    />
+  </div>
+</div>
+`;
