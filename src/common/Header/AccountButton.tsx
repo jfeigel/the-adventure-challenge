@@ -66,7 +66,7 @@ function AccountButton() {
           }
         }}
       >
-        <MenuItem component={RouterLink} to="/profile">
+        <MenuItem component={RouterLink} to="/profile" onClick={handleClose}>
           My Profile
         </MenuItem>
         <MenuItem
