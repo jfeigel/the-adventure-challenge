@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from 'react';
+import React, { MouseEvent, useContext, useState } from 'react';
 
 import { useAuth0 } from '@auth0/auth0-react';
 import {
@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
+import { AuthContext } from 'Auth/AuthProvider';
 import UserAvatar from 'common/UserAvatar';
 import { ReactComponent as Auth0Icon } from 'images/auth0.svg';
 
@@ -18,8 +19,7 @@ function AccountButton() {
   /**
    * Hooks
    */
-  const { isAuthenticated, isLoading, loginWithRedirect, logout, user } =
-    useAuth0();
+  const { isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
 
   /**
    * State
@@ -27,9 +27,14 @@ function AccountButton() {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const open = Boolean(anchorEl);
 
-  if (isLoading) return <Skeleton variant="circular" height={40} width={40} />;
+  /**
+   * Context
+   */
+  const { loading, user } = useContext(AuthContext);
 
-  return !isAuthenticated ? (
+  return isLoading || loading || (isAuthenticated && !user) ? (
+    <Skeleton variant="circular" height={40} width={40} sx={{ m: 1 }} />
+  ) : !isAuthenticated ? (
     <Button
       variant="contained"
       endIcon={<SvgIcon component={Auth0Icon} inheritViewBox />}

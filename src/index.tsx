@@ -6,6 +6,7 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import ThemeProvider from 'mui/components/ThemeProvider';
 
 import App from 'App';
+import AuthProvider from 'Auth/AuthProvider';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,13 +17,15 @@ ReactDOM.render(
         }
       >
         <Auth0Provider
-          domain="jfeigel.auth0.com"
-          clientId="bs9cX5hIrsq1LMc85bKFvmBkgcC143In"
+          domain={process.env.REACT_APP_AUTH0_DOMAIN as string}
+          clientId={process.env.REACT_APP_AUTH0_CLIENT_ID as string}
           redirectUri={`${window.location.origin}${process.env.REACT_APP_BASE_URI}`}
-          audience="https://jfeigel.auth0.com/api/v2/"
+          audience={process.env.REACT_APP_AUTH0_AUDIENCE}
           scope="read:current_user"
         >
-          <App />
+          <AuthProvider>
+            <App />
+          </AuthProvider>
         </Auth0Provider>
       </BrowserRouter>
     </ThemeProvider>

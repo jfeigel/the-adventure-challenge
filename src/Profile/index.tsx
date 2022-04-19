@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useContext, useMemo } from 'react';
 
 import { useAuth0 } from '@auth0/auth0-react';
 import {
@@ -12,30 +12,24 @@ import {
 } from '@mui/material';
 import { find } from 'lodash-es';
 
+import { AuthContext } from 'Auth/AuthProvider';
 import UserAvatar from 'common/UserAvatar';
 
 function Profile() {
   /**
    * Hook
    */
-  const { getAccessTokenSilently, logout, user } = useAuth0();
+  const { logout } = useAuth0();
 
   /**
-   * State
+   * Context
    */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [userData, setUserData] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-
-  /**
-   * Effect
-   */
-  useEffect(metaEffect, [getAccessTokenSilently, user?.sub]);
+  const { loading, user } = useContext(AuthContext);
 
   /**
    * Memo
    */
-  const identity = useMemo(identityMemo, [userData]);
+  const identity = useMemo(identityMemo, [user]);
 
   return (
     <Container maxWidth="sm">
@@ -96,52 +90,14 @@ function Profile() {
   );
 
   /**
-   * Effect defs
-   */
-  function metaEffect() {
-    (async () => {
-      if (!user?.sub) return false;
-
-      const domain = 'jfeigel.auth0.com';
-      setLoading(true);
-
-      try {
-        const accessToken = await getAccessTokenSilently({
-          audience: `https://${domain}/api/v2/`,
-          scope: 'read:current_user'
-        });
-
-        const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user?.sub}`;
-
-        const res = await fetch(userDetailsByIdUrl, {
-          headers: {
-            Authorization: `Bearer ${accessToken}`
-          }
-        });
-
-        const data = await res.json();
-
-        setUserData(data);
-      } catch (e) {
-        console.error((e as Error).message);
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }
-
-  /**
    * Memo defs
    */
   function identityMemo() {
-    if (
-      !userData?.identities ||
-      find(userData.identities, ['isSocial', false])
-    ) {
+    if (!user?.identities || find(user.identities, ['isSocial', false])) {
       return undefined;
     } else {
       if (
-        find(userData.identities, (id) =>
+        find(user.identities, (id) =>
           id.provider.toLowerCase().includes('google')
         )
       ) {
@@ -150,7 +106,7 @@ function Profile() {
           provider: 'Google'
         };
       } else if (
-        find(userData.identities, (id) =>
+        find(user.identities, (id) =>
           id.provider.toLowerCase().includes('github')
         )
       ) {

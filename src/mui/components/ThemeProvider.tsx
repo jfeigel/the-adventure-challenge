@@ -16,6 +16,9 @@ interface Props {
 function ThemeProvider({ children }: Props) {
   const theme = createTheme({
     components: {
+      MuiAvatar: {
+        styleOverrides: styleOverrides.MuiAvatar
+      },
       MuiButton: {
         styleOverrides: styleOverrides.MuiButton
       },

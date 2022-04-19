@@ -3,19 +3,20 @@ import React from 'react';
 import {
   AppBar,
   Box,
-  Button,
+  // Button,
   Container,
-  IconButton,
+  // IconButton,
   Link,
   Toolbar,
   Typography
 } from '@mui/material';
-import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
-import WcIcon from '@mui/icons-material/Wc';
+// import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
+// import WcIcon from '@mui/icons-material/Wc';
 import { Link as RouterLink } from 'react-router-dom';
 
 import logo from 'images/logo48.png';
 import AccountButton from './AccountButton';
+import AdventuresButton from './AdventuresButton';
 
 function Header() {
   return (
@@ -54,8 +55,9 @@ function Header() {
                 justifyContent: 'center'
               }}
             >
+              <AdventuresButton />
               {/* Couples Button */}
-              <Button
+              {/* <Button
                 color="couples"
                 sx={{ mr: 2, display: { xs: 'none', md: 'inline-flex' } }}
               >
@@ -63,10 +65,10 @@ function Header() {
               </Button>
               <IconButton sx={{ display: { xs: 'inline-flex', md: 'none' } }}>
                 <WcIcon />
-              </IconButton>
+              </IconButton> */}
               {/* /Couples Button */}
               {/* Family Button */}
-              <Button
+              {/* <Button
                 color="family"
                 sx={{ mr: 2, display: { xs: 'none', md: 'inline-flex' } }}
               >
@@ -74,7 +76,7 @@ function Header() {
               </Button>
               <IconButton sx={{ display: { xs: 'inline-flex', md: 'none' } }}>
                 <FamilyRestroomIcon />
-              </IconButton>
+              </IconButton> */}
               {/* /Family Button */}
             </Box>
             <AccountButton />
